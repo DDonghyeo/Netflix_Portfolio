@@ -141,6 +141,15 @@
 /* ------------------core-------------------- */
 body{
     margin: 0;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
+
+h3 a{
+    color:cornflowerblue;
 }
 
 .nav{
@@ -164,6 +173,7 @@ body{
 .nav img{
     width: 150px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .navitem{
@@ -182,6 +192,9 @@ body{
     width: 100%;
     margin: 0;
     background: linear-gradient(180deg,black,#141414);
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
 }
 
 .title{
@@ -190,16 +203,24 @@ body{
     margin-top: 40px;
     /* margin-top: 40px; */
     /* position:fixed; */
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
 }
 
 .desc{
-    color: white;
+    padding: 20px;
+    /* border: 1px solid white; */
+    /* border-radius: 10px; */
+    color: rgb(207, 202, 202);
     margin-top: 120px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .title img{
     width: 80%;
 }
+
 
 .core_title{
     color: #fff;
@@ -222,4 +243,67 @@ body{
     width: 200px;
     height: 120px;
     margin-right: 5px;
+    transition: all .5s;
+}
+
+.core_cont img:hover{
+    width: 260px;
+    height: 160px;
+}
+
+.project:hover{
+    border: 3px solid #fff;
+}
+
+.activity{
+    margin: 10px;
+    display: none;
+    color: #fff;
+}
+/* modal */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal_content{
+    line-height: 10px;
+    text-align: center;
+    background-color: #fefefe;
+    border-radius: 5px;
+    padding: 2.5rem;
+    border: 1px solid #888;
+    width: 60%;
+    max-width: 900px;
+    height: auto;
+    margin:0;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    -webkit-transform:translate(-50%, -50%);
+    -ms-transform:translate(-50%, -50%);
+}
+
+.close {
+    background-color: #141414;
+    color: #aaa;
+    float: right;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.close:focus,
+.close:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

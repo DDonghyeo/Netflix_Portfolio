@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="nav">
-        <img src="{% static 'img/logo.png' %}" alt="">
+        <img src="{% static 'img/logo.png' %}" alt="" onclick="location.href='/'">
         <div class="navitem" onclick="window.location.reload()">홈</div>
         <div class="navitem">소개</div>
         <div class="navitem">테크</div>
@@ -22,7 +22,7 @@
         <div class="desc">
             <h2>김동현</h2>
             <h3>24살</h3>
-            <h3>상명대학교 컴퓨터과학전공 3학년</h3>
+            <h3>상명대학교 컴퓨터과학과전공 3학년</h3>
             <h3>Contact : gsu9045000@gmail.com</h3>
             <h3>Github : <a href="https://github.com/DDonghyeo">Link</a></h3>
             <h3>velog : <a href="https://velog.io/@ddonghyeo_">Link</a></h3>
@@ -31,7 +31,7 @@
         </div>
     </div>
     <div class="core"> 
-        <div class="core_title">테크</div>
+        <div class="core_title">언어</div>
         <div class="core_cont">
             <img src="{% static 'img/java.png' %}" alt="">
             <img src="{% static 'img/python.png' %}" alt="">
@@ -39,25 +39,81 @@
             <img src="{% static 'img/html.png' %}" alt="">
             <img src="{% static 'img/css.png' %}" alt="">
             <img src="{% static 'img/js.png' %}" alt="">
+        </div>
+        <div class="core_title">테크</div>
+        <div class="core_cont">
+            <img src="{% static 'img/spring.png' %}">
+            <img src="{% static 'img/mysql.png' %}" alt="">
+            <img src="{% static 'img/django.png' %}" alt="">
+            <img src="{% static 'img/github.png' %}" alt="">
+            <img src="{% static 'img/aws.png' %}" alt="">
         </div>
         <div class="core_title">프로젝트</div>
         <div class="core_cont">
-            <img src="{% static 'img/waither.png' %}" alt="">
-            <img src="{% static 'img/python.png' %}" alt="">
-            <img src="{% static 'img/c.png' %}" alt="">
-            <img src="{% static 'img/html.png' %}" alt="">
-            <img src="{% static 'img/css.png' %}" alt="">
-            <img src="{% static 'img/js.png' %}" alt="">
+            <img class="project" src="{% static 'img/waither.png' %}" style="cursor: pointer;" onclick="openm('waither')">
+            <img class="project" src="{% static 'img/smunity.png' %}" style="cursor: pointer;" open="smunity" >
+            <img class="project" src="{% static 'img/Online.png' %}" style="cursor: pointer;" alt="">
         </div>
         <div class="core_title">액티비티</div>
-        <div class="core_cont">
-            <img src="{% static 'img/java.png' %}" alt="">
-            <img src="{% static 'img/python.png' %}" alt="">
-            <img src="{% static 'img/c.png' %}" alt="">
-            <img src="{% static 'img/html.png' %}" alt="">
-            <img src="{% static 'img/css.png' %}" alt="">
-            <img src="{% static 'img/js.png' %}" alt="">
+        <div class="core_cont" style="margin-bottom: 0; padding-bottom: 80px;">
+            <img id="umc" src="{% static 'img/umc.png' %}" alt="">
+            <div id="umc_activity" class="activity">
+                <li>UMC 3rd Spring 부원</li>
+                <li>UMC 아이디어톤 5개 중 3개 수상</li>
+                <li>UMC 4th 운영진 Server 파트장</li>
+            </div>
+            <img id="demoday" src="{% static 'img/demoday.png' %}" alt="">
+            <div id="demoday_activity" class="activity">
+                <li>UMC DemoDay 최우수상</li>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <!-- waither -->
+    <div id="waither" class="modal">
+        <div class="modal_content">
+            <span class="close" id="close-culture-s" onclick="modal_close(this)" close="waither">&times;</span>
+            <div class="modal_div">
+                div.
+            </div>
         </div>
     </div>
 </body>
+<script>
+    function openm(e){
+        document.getElementById(e).style.display = "block";
+    }
+
+    function modal_close(e){
+        var target = document.getElementById(e.getAttribute('close')).getAttribute('id');
+        document.getElementById(target).style.display = "none";
+    }
+
+    var umc = document.getElementById('umc')
+    umc.addEventListener('mouseenter', umc_in)
+    umc.addEventListener('mouseleave', umc_out)
+
+    function umc_in() {
+        document.getElementById('umc_activity').style.display = "block";
+    }
+
+    function umc_out() {
+        document.getElementById('umc_activity').style.display = "none";
+    }
+
+
+    var umc = document.getElementById('demoday')
+    umc.addEventListener('mouseenter', demo_in)
+    umc.addEventListener('mouseleave', demo_out)
+
+    function demo_in() {
+        document.getElementById('demoday_activity').style.display = "block";
+    }
+
+    function demo_out() {
+        document.getElementById('demoday_activity').style.display = "none";
+    }
+
+</script>
 </html>
