@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <div class="nav">
+        <img src="{% static 'img/logo.png' %}" alt="">
+        <div class="navitem" onclick="window.location.reload()">홈</div>
+        <div class="navitem">소개</div>
+        <div class="navitem">테크</div>
+        <div class="navitem">프로젝트</div>
+        <div class="navitem">액티비티</div>
+    </div>
+    <div class="core">
+        <div class="title">
+            <img src="{% static 'img/title.png' %}" alt="">
+        </div>
+        <div class="core_title">테크</div>
+        <div class="corecont">
+            <img src="" alt="">
+        </div>
+        <div class="lang"></div>
+    </div>
+</body>
+</html>
