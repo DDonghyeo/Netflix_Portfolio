@@ -51,8 +51,8 @@
         <div class="core_title">프로젝트</div>
         <div class="core_cont">
             <img class="project" src="{% static 'img/waither.png' %}" style="cursor: pointer;" onclick="openm('waither')">
-            <img class="project" src="{% static 'img/smunity.png' %}" style="cursor: pointer;" open="smunity" >
-            <img class="project" src="{% static 'img/Online.png' %}" style="cursor: pointer;" alt="">
+            <img class="project" src="{% static 'img/smunity.png' %}" style="cursor: pointer;" onclick="openm('smunity')" >
+            <img class="project" src="{% static 'img/Online.png' %}" style="cursor: pointer;" onclick="openm('tools')">
         </div>
         <div class="core_title">액티비티</div>
         <div class="core_cont" style="margin-bottom: 0; padding-bottom: 80px;">
@@ -73,9 +73,57 @@
     <!-- waither -->
     <div id="waither" class="modal">
         <div class="modal_content">
-            <span class="close" id="close-culture-s" onclick="modal_close(this)" close="waither">&times;</span>
+            <span class="close" onclick="modal_close(this)" close="waither">&times;</span>
             <div class="modal_div">
-                div.
+                <div class="modal_title" id="waither_title"></div>
+                <div class="modal_desc">
+                    <div class="desc_name">나만의 기상비서, Waither</div>
+                    <div class="desc_inf">
+                        - PM, Back-End 참여 <br>
+                        - Tech : Spring, Spring Boot, MySQL, AWS, JDBC, etc <br>
+                        - 사용자에 맞춤화된 개인 기상 서비스입니다. <br>
+                        - PM과 백엔드 파트를 동시에 참여했으며, 서버 배포&관리, HTTPS, SSL, Spring Security, Swagger 등을 활동했습니다. <br>
+                        - 앱 런칭까지 진행 중에 있습니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- smunity -->
+    <div id="smunity" class="modal">
+        <div class="modal_content">
+            <span class="close" onclick="modal_close(this)" close="smunity">&times;</span>
+            <div class="modal_div">
+                <div class="modal_title" id="smunity_title"></div>
+                <div class="modal_desc">
+                    <div class="desc_name">상명대 졸업요건 사이트, Smunity</div>
+                    <div class="desc_inf">
+                        - Full Stack 참여 <br>
+                        - Tech : Django, AWS, Docker <br>
+                        - 상명대학교 졸업생들을 위한 졸업요건 사이트입니다. <br>
+                        - 결과 페이지 (html,css,js), 일부 결과 로직과 배포, 정보획득 등의 활동을 했습니다. <br>
+                        - <a href="https://www.smunity.co.kr/">배포</a>가 완료되었고, 현재 운영 중에 있으며 학생회와 컨택하여 확장 중입니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- tools -->
+    <div id="tools" class="modal">
+        <div class="modal_content">
+            <span class="close" onclick="modal_close(this)" close="tools">&times;</span>
+            <div class="modal_div">
+                <div class="modal_title" id="tools_title"></div>
+                <div class="modal_desc">
+                    <div class="desc_name">온라인 툴 페이지</div>
+                    <div class="desc_inf">
+                        - Full Stack 참여 <br>
+                        - Tech : Django, Apache, mysql, AWS <br>
+                        - 여러 유용한 툴들을 사용할 수 있는 사이트입니다. <br>
+                        - 서버 배포 & 관리, 상당 백엔드 파트 담당, 프론트 파트를 담당했습니다.  <br>
+                        - 배포까지 진행했으나 현재는 중단 상태입니다.
+                    </div>
+                </div>
             </div>
         </div>
     </div>
